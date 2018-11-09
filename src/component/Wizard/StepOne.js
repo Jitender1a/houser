@@ -59,13 +59,13 @@ class StepOne extends Component{
     }
 }
 function mapStateToProps(state){
-    const {updateName,updateAddress,updateCity,updateState,updateZip}=state
+    
     return{
-        updateName,
-        updateAddress,
-        updateCity,
-        updateState,
-        updateZip
+        name:state.name,
+        address:state.address,
+        city:state.city,
+        state:state.state,
+        zip:state.zip
     }
 }
 export default connect (mapStateToProps, {updateName,updateAddress,updateCity,updateState,updateZip})(StepOne);
